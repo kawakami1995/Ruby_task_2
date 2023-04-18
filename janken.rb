@@ -84,6 +84,7 @@ def janken
   #@victory = 1:自分が勝利
   #@victory = 2:相手が勝利
   if @me == "グー"
+    
     if @opponent[1] == "チョキ"
       @victory = 1
     elsif @opponent[1] == "パー"
@@ -91,6 +92,7 @@ def janken
     end
     
   elsif @me == "チョキ"
+    
     if @opponent[1] == "グー"
       @victory = 2
     elsif @opponent[1] == "パー"
@@ -98,11 +100,13 @@ def janken
     end
 
   elsif @me == "パー"
+    
     if @opponent[1] == "グー"
       @victory = 1
     elsif @opponent[1] == "チョキ"
       @victory = 2
     end    
+  
   end
 
 end
@@ -131,7 +135,7 @@ def look_this_way
     @me = "右"
   else
     puts "0~3のいずれかを選択してください"
-    #もうあっち向いてホイをする（処理の記述は178行目）
+    #もう一度あっち向いてホイをする（処理の記述は178行目）
   end  
 
   if @num <= 3
